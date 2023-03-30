@@ -1,3 +1,5 @@
+import { faMagnifyingGlass, faUser } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames/bind';
 
 import styles from './Header.module.scss';
@@ -10,37 +12,62 @@ function Header() {
       <div className="grid">
         <div className="col l-12">
           <div className={cx('wrapper')}>
-            {/* logo */}
+            {/* Logo */}
             <a className={cx('logo-link')} href="/">
               <img className={cx('logo')} src={require('./components/img/logo.png')} alt="logo" />
             </a>
 
-            {/* nav */}
+            {/* Nav */}
             <nav className={cx('nav')}>
+              {/* Nav-left */}
               <ul className={cx('nav-left')}>
-                <li className={cx('nav-item')} href="/">
-                  <a className={cx('nav-link', 'dropdown')}>Du lịch</a>
+                <li className={cx('nav-item')}>
+                  <a className={cx('nav-link', 'dropdown')} href="/">
+                    Du lịch
+                  </a>
                 </li>
-                <li className={cx('nav-item')} href="/">
-                  <a className={cx('nav-link')}>Vietravel MICE</a>
+                <li className={cx('nav-item')}>
+                  <a className={cx('nav-link')} href="/">
+                    Vietravel MICE
+                  </a>
                 </li>
-                <li className={cx('nav-item')} href="/">
-                  <a className={cx('nav-link', 'dropdown')}>Vận chuyển</a>
+                <li className={cx('nav-item')}>
+                  <a className={cx('nav-link', 'dropdown')} href="/">
+                    Vận chuyển
+                  </a>
                 </li>
-                <li className={cx('nav-item')} href="/">
-                  <a className={cx('nav-link', 'dropdown')}>Tin tức</a>
+                <li className={cx('nav-item')}>
+                  <a className={cx('nav-link', 'dropdown')} href="/">
+                    Tin tức
+                  </a>
                 </li>
-                <li className={cx('nav-item')} href="/">
-                  <a className={cx('nav-link', 'dropdown')}>Khuyến mãi</a>
+                <li className={cx('nav-item')}>
+                  <a className={cx('nav-link', 'dropdown')} href="/">
+                    Khuyến mãi
+                  </a>
                 </li>
-                <li className={cx('nav-item')} href="/">
-                  <a className={cx('nav-link')}>VietravelPlus</a>
+                <li className={cx('nav-item')}>
+                  <a className={cx('nav-link')} href="/">
+                    VietravelPlus
+                  </a>
                 </li>
-                <li className={cx('nav-item')} href="/">
-                  <a className={cx('nav-link')}>Liên hệ</a>
+                <li className={cx('nav-item')}>
+                  <a className={cx('nav-link')} href="/">
+                    Liên hệ
+                  </a>
                 </li>
               </ul>
-              <div className={cx('nav-right')}>input</div>
+              <div className={cx('nav-right')}>
+                <form className={cx('search')}>
+                  <input className={cx('input')} placeholder="Bắt đầu tìm kiếm..." spellCheck={false}></input>
+                  <button className={cx('button')}>
+                    <FontAwesomeIcon className={cx('button-icon')} icon={faMagnifyingGlass} />
+                  </button>
+                </form>
+                <a className={cx('account')} href="/">
+                  <FontAwesomeIcon className={cx('account-icon')} icon={faUser} />
+                </a>
+              </div>
             </nav>
           </div>
         </div>
